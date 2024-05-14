@@ -4,10 +4,12 @@ Realtime Election Voting System
 This repository contains the code for a realtime election voting system. The system is built using Python, Kafka, Spark Streaming, Postgres and Streamlit. The system is built using Docker Compose to easily spin up the required services in Docker containers.
 
 ## System Architecture
-![system_architecture.jpg](images%2Fsystem_architecture.jpg)
+![image](https://github.com/Roshinigompa/realtime-voting-bigData/assets/62955925/4d5c9263-4cf3-4a7f-a9e2-ffbeb3ca9e16)
+
 
 ## System Flow
-![system_flow.jpg](images%2Fsystem_flow.jpg)
+![image](https://github.com/Roshinigompa/realtime-voting-bigData/assets/62955925/a2be8eae-85d3-437b-926c-5b59323be41d)
+
 
 ## System Components
 - **main.py**: This is the main Python script that creates the required tables on postgres (`candidates`, `voters` and `votes`), it also creates the Kafka topic and creates a copy of the `votes` table in the Kafka topic. It also contains the logic to consume the votes from the Kafka topic and produce data to `voters_topic` on Kafka.
