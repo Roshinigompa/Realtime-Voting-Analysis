@@ -3,13 +3,6 @@ Realtime Election Voting System
 
 This repository contains the code for a realtime election voting system. The system is built using Python, Kafka, Spark Streaming, Postgres and Streamlit. The system is built using Docker Compose to easily spin up the required services in Docker containers.
 
-## System Architecture
-![image](https://github.com/Roshinigompa/realtime-voting-bigData/assets/62955925/4d5c9263-4cf3-4a7f-a9e2-ffbeb3ca9e16)
-
-
-## System Flow
-![image](https://github.com/Roshinigompa/realtime-voting-bigData/assets/62955925/a2be8eae-85d3-437b-926c-5b59323be41d)
-
 
 ## System Components
 - **main.py**: This is the main Python script that creates the required tables on postgres (`candidates`, `voters` and `votes`), it also creates the Kafka topic and creates a copy of the `votes` table in the Kafka topic. It also contains the logic to consume the votes from the Kafka topic and produce data to `voters_topic` on Kafka.
@@ -27,9 +20,6 @@ This Docker Compose file allows you to easily spin up Zookkeeper, Kafka and Post
 
 
 ### Steps to Run
-1. Clone this repository.
-2. Navigate to the root containing the Docker Compose file.
-3. Run the following command:
 
 ```bash
 docker-compose up -d
@@ -69,18 +59,3 @@ python spark-streaming.py
 ```bash
 streamlit run streamlit-app.py
 ```
-
-## Screenshots
-### Candidates and Parties information
-![candidates_and_party.png](images/candidates_and_party.png)
-### Voters
-![voters.png](images%2Fvoters.png)
-
-### Voting
-![voting.png](images%2Fvoting.png)
-
-### Dashboard
-![dashboard_image.png](images%2Fdashboard_image.png)
-
-## Video
-[![Realtime Voting System Data Engineering](https://img.youtube.com/vi/X-JnC9daQxE/0.jpg)](https://youtu.be/X-JnC9daQxE)
